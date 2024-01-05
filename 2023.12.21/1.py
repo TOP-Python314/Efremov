@@ -17,11 +17,11 @@ nominals = {
 }
 percent = {'E6': 0.2, 'E12': 0.1, 'E24': 0.05, 'E48': 0.02, 'E96': 0.01}
 def pick_resistors(num: int) -> dict | None:
-    c = {}
+    nominals_dict = {}
     for nominal in nominals:
-        c[nominal] = calc(num, percent[nominal], nominals[nominal])
+        nominals_dict[nominal] = calc(num, percent[nominal], nominals[nominal])
     if 100 <= num <= 999:
-        return c
+        return nominals_dict
     else:
         return None
         
@@ -39,7 +39,12 @@ def calc(num: int, nom_percent: float, nominal: str) -> tuple:
     else:
         min_diff = min([min_diff1, min_diff1])
         
-    c1 = filter(lambda x: abs(x-num1)==b3, nominal)
-    c2 = filter(lambda x: abs(x-num2)==b3, nominal)
-    return tuple(c1)+tuple(c2)
-    
+    nom1 = filter(lambda x: abs(x-num1)==min_diff, nominal)
+    nom2 = filter(lambda x: abs(x-num2)==min_diff, nominal)
+    return tuple(nom1)+tuple(nom2)
+  
+# >>> pick_resistors(369)
+# {'E6': (330,), 'E12': (330,), 'E24': (360,), 'E48': (365,), 'E96': (365,)}  
+
+# >>> pick_resistors(190)
+# {'E6': (150,), 'E12': (180,), 'E24': (180, 200), 'E48': (187,), 'E96': (187,)}
