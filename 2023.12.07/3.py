@@ -1,16 +1,16 @@
-nums_1 = input()
-nums_2 = input()
+nums1 = input()
+nums2 = input()
 
 # if len(nums_1.split(nums_2)) > 1:
     # print('да')
 # else:
     # print('нет')
     
-a = [int(n) for n in nums_1.split()]
-b = [int(n) for n in nums_2.split()]
+a = [int(n) for n in nums1.split()]
+b = [int(n) for n in nums2.split()]
 flag = False
-for i in range(len(nums_1) - len(nums_2)):
-    if nums_2 == nums_1[i:len(nums_2)+i]:
+for i in range(len(nums1) - len(nums2)):
+    if nums2 == nums1[i:len(nums2)+i]:
         flag = True
         break
 if flag:
