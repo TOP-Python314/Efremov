@@ -1,18 +1,18 @@
-num_1 = int(input())
-num_2 = int(input())
-num_3 = num_1 % num_2
-num_4 = num_1 // num_2
-if num_3 == 0:
+num1 = int(input())
+num2 = int(input())
+num3 = num1 % num2
+num4 = num1 // num2
+if num3 == 0:
     print(
-        f'{num_1} делится на {num_2} нацело',
-        f'частное: {num_4}',
+        f'{num1} делится на {num2} нацело',
+        f'частное: {num4}',
         sep = '\n'
         )
 else:
     print(
-        f'{num_1} не делится на {num_2} нацело',
-        f'неполное частное: {num_4}',
-        f'остаток: {num_3}',
+        f'{num1} не делится на {num2} нацело',
+        f'неполное частное: {num4}',
+        f'остаток: {num3}',
         sep = '\n'
         )
 
