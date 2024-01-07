@@ -1,12 +1,12 @@
-num_1 = int(input())
-num_2 = input()
-length_num_2 = len(num_2)
+num1 = int(input())
+num2 = input()
+length_num2 = len(num2)
 # ИСПОЛЬЗОВАТЬ: PEP 8 рекомендует для имён переменных использовать змеиный_нижний_регистр или слитныйнижнийрегистр
 # ИСПРАВИТЬ: этот способ не сработает, если пользователю потребуется ввести дробную часть для числа с количеством десятичных знаков больше одного (см. тест ниже) — придумайте более универсальное решение
 
-sum_mile = num_1 + int(num_2) / 10 ** length_num_2
+sum_mile = num1 + int(num2) / 10 ** length_num2
 num_km = sum_mile * 1.61
-print(f'{sum_mile:.{length_num_2}f} миль = {num_km:.1f} км')
+print(f'{sum_mile:.{length_num2}f} миль = {num_km:.1f} км')
 
 # 382
 # 37593
