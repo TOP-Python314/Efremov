@@ -90,7 +90,7 @@
     >>> pm1.meter(1.2)
     Decimal('7.80')
     >>> 
-    >>> pm
+    >>> pm1
     <PowerMeter: 3.2 кВт/ч>
     >>> print(pm1)
     (Jul) 20.80
